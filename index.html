@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Juf Sophie - Delen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="meester-kees">
+                <img src="juf-sophie.jpeg" alt="Juf Sophie" class="meester-kees-img">
+            </div>
+            <h1>Juf Sophie</h1>
+            <p class="subtitle">Tijdvormen oefenen</p>
+        </header>
+
+        <div id="start-screen" class="screen active">
+            <div class="welcome-message">
+                <h3>Welkom in mijn spelletje met 20 zinnen!</h3>
+                <p>Bepaal in welke tijd elke zin staat. Neem de tijd die je nodig hebt.</p>
+            </div>
+            <button id="start-btn" class="btn btn-primary">Start Spel</button>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="score">Score: <span id="score">0</span></div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-label-box">
+                    <p class="question-label">In welke tijd staat deze zin?</p>
+                </div>
+                <div class="question">
+                    <span id="question-text">Ik loop naar school.</span>
+                </div>
+            </div>
+
+            <div class="answers">
+                <button class="answer-btn" data-answer="0">Tegenwoordige tijd</button>
+                <button class="answer-btn" data-answer="1">Verleden tijd</button>
+                <button class="answer-btn" data-answer="2">Voltooide tijd</button>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+        </div>
+
+        <div id="end-screen" class="screen">
+            <div class="end-content">
+                <h2>Geweldig gedaan!</h2>
+                <div class="final-score">
+                    <p>Je eindscore:</p>
+                    <div class="score-display" id="final-score">0</div>
+                </div>
+                <div class="stats">
+                    <p>Goed beantwoord: <span id="correct-count">0</span></p>
+                    <p>Totaal vragen: <span id="total-count">0</span></p>
+                </div>
+                <div id="victory-float" class="victory-float">
+                    <div class="victory-item">
+                        <img src="juf-sophie-eind.png" alt="Juf Sophie" class="victory-img">
+                        <div class="victory-text">Je hebt me verslagen!</div>
+                    </div>
+                </div>
+                <button id="restart-btn" class="btn btn-primary">Opnieuw Spelen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="zinnen-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
